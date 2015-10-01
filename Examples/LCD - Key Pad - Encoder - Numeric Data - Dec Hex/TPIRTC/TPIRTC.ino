@@ -1,3 +1,12 @@
+// ejemplo de recoleccion de datos numericos desde el keypad
+// recibe decimales de 1 a 4 digitos
+// recibe hexadecimales de 1 y 2 digitos
+// regresa los datos por el serial
+// la posicion es seleccionable
+// seleccionable el minimo, el maximo y el default en el caso de no selecciona ninguno
+
+
+
 // librerias
 #include <LiquidCrystal.h>		// libreria para LCD - ttps://bitbucket.org/fmalpartida/new-liquidcrystal/wiki/Home	
 #include <Wire.h>

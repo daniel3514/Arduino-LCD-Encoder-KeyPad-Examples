@@ -89,8 +89,6 @@ void setup()
 	pinMode		(Keypad_2, INPUT_PULLUP);
 	pinMode		(Keypad_3, INPUT_PULLUP);
 	pinMode		(Keypad_4, INPUT_PULLUP);
-
-	Serial.begin(9600);
 }
 
 void loop()
@@ -184,20 +182,15 @@ void menu()
 					
 					if (valor_nuevo > 255)	// poner limite max
 					{
-						goto siguiente;		// enter
+						break; // enter
 					}
 
-					analogWrite(Back_Light_PWM, valor_nuevo);
+					analogWrite(Back_Light_PWM, valor_nuevo);	// accion
 					valor = valor_nuevo;
 		
 				}
-
-			siguiente:
-
-				lcd.noBlink();							// parpadear cursor
-
-				Numerico_Print(1, 0, valor, 255, 1);	// acomodar numero 		// poner max
-
+					// acomodar numero 	
+				Numerico_Print(1, 0, valor, 255, 1);	// poner max 	// Numerico_Print(byte LCD_x, byte LCD_y, int valor, int max, byte Dec_Hex)
 			}
 
 			break;
@@ -263,6 +256,7 @@ void Numerico_Print(byte LCD_x, byte LCD_y, int valor, int max, byte Dec_Hex)
 
 	// calcular tamaño
 
+	lcd.noBlink();							// no parpadear cursor
 	lcd.setCursor(LCD_x, LCD_y);
 
 		// Dec

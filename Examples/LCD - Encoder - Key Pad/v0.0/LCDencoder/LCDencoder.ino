@@ -1,5 +1,8 @@
 // LCD  encoder
 
+// Arduino mega
+// probado en Arduino Arduino DMX-512 Tester Controller	hardv 0.7
+
 	// Librerias
 #include <LiquidCrystal.h>			// libreria para LCD - ttps://bitbucket.org/fmalpartida/new-liquidcrystal/wiki/Home	
 #include <Wire.h>
@@ -13,14 +16,14 @@ byte 	Enc_Data 			= 6;	// pin
 Encoder myEnc				(Enc_CLK, Enc_Data);	// conexion de encoder
 
 // tecleado					
-byte Keypad_A			= 30; 	
-byte Keypad_B			= 32; 	
-byte Keypad_C			= 34; 	
-byte Keypad_D			= 36; 	
-byte Keypad_1			= 38; 	
-byte Keypad_2			= 40; 
-byte Keypad_3			= 42;
-byte Keypad_4			= 44;
+byte Keypad_A				= 30; 	
+byte Keypad_B				= 32; 	
+byte Keypad_C				= 34; 	
+byte Keypad_D				= 36; 	
+byte Keypad_1				= 38; 	
+byte Keypad_2				= 40; 
+byte Keypad_3				= 42;
+byte Keypad_4				= 44;
 
 	// Cursor
 int  Cursor_Index_Pos 		= 1;	// posicion en tiempo real de lcd

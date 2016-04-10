@@ -1339,3 +1339,28 @@ int Numerico_Key()
 	
 	return numero;
 }
+
+void Numerico_Write (int valor, int col, int row)
+{
+  // posicionar el valor en los campos 000
+
+  lcd.setCursor (col, row);
+  lcd.print ("000");
+
+  if (valor < 10)
+  {
+    lcd.setCursor (col + 2, row);
+  }
+
+  if (valor > 9 && valor < 100)
+  {
+    lcd.setCursor (col + 1, row);
+  }
+
+  if (valor > 99)
+  {
+    lcd.setCursor (col, row);
+  }
+
+  lcd.print (valor);
+}
